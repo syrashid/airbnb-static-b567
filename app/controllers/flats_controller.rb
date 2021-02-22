@@ -8,6 +8,7 @@ class FlatsController < ApplicationController
 
   def show
     @flat = @flats.find { |flat| flat["id"] == params["id"].to_i }
+    raise
     @image_url = @flat['imageUrl']
   end
 
